@@ -1,4 +1,5 @@
 import Animated from "./Animated";
+import Brand from "./Brand";
 import Button from "./Button";
 import Card from "./Card";
 import Hero from "./Hero";
@@ -28,6 +29,7 @@ import Visibility from "./Visibility";
 
 export const Atom = {
   Input,
+  Animated,
   Button,
   Hero,
   Visibility,
@@ -37,5 +39,5 @@ export const Atom = {
   TextArea,
   Toggle,
   Card,
-  Animated,
+  Brand,
 };

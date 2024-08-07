@@ -64,10 +64,11 @@ export default function Alert({ type, message, onClose, isOpen }: Props) {
         <div className="flex flex-row gap-4">
           {alertTypeClass[type].svg}
           <span>{message}</span>
-          <XMarkIcon
-            onClick={onClose}
-            className="w-6 cursor-pointer absolute right-5"
-          />
+          <span className="absolute right-2 top-1">
+            <Atom.Button buttonType="btn-ghost" onClick={onClose}>
+              <XMarkIcon role="button" className="w-6" />
+            </Atom.Button>
+          </span>
         </div>
       </div>
     </Atom.Animated>
