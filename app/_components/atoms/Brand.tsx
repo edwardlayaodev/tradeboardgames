@@ -1,4 +1,11 @@
 import Image from "next/image";
+import { Zilla_Slab } from "next/font/google";
+import React, { ReactNode } from "react";
+
+const zilla = Zilla_Slab({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
 
 /**
  * Interface for the logo properties.
@@ -16,12 +23,12 @@ interface LogoProps {
 
 /**
  * Props interface for the Brand component.
- * @param {LogoProps} logoProps - The properties for the logo image.
- * @param {string} [label] - The optional label text to be displayed.
+ * @param {LogoProps} logoProps - optional properties for the logo image.
+ * @param {string} [label] - The label text to be displayed.
  */
 interface Props {
-  logoProps: LogoProps;
-  label?: string;
+  logoProps?: LogoProps;
+  label: string | ReactNode;
 }
 
 /**
@@ -31,14 +38,20 @@ interface Props {
  */
 export default function Brand({ logoProps, label }: Props) {
   return (
-    <div>
-      <Image
-        src={logoProps.src}
-        width={logoProps.width}
-        height={logoProps.height}
-        alt={logoProps.alt}
-      />
-      <p className="text-bold text-2xl text-primary-content">{label}</p>
+    <div className="flex flex-row justify-center items-center gap-2">
+      {logoProps && (
+        <Image
+          src={logoProps.src}
+          width={logoProps.width}
+          height={logoProps.height}
+          alt={logoProps.alt}
+        />
+      )}
+      <p
+        className={`text-bold text-2xl text-primary-content font-bold ${zilla.className}`}
+      >
+        {label}
+      </p>
     </div>
   );
 }
