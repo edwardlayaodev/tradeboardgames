@@ -15,9 +15,7 @@ interface Props {
  */
 export default function Card({ children, extraClass }: Props) {
   return (
-    <div
-      className={`card bg-base-100 shadow-xl w-full px-2 py-4 md:p-6 ${extraClass}`}
-    >
+    <div className={`card bg-base-100 shadow-xl w-full ${extraClass}`}>
       {children}
     </div>
   );

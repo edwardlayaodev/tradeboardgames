@@ -2,6 +2,8 @@ import { Atom } from "@/app/_components/atoms";
 import { Molecule } from "@/app/_components/molecules";
 import SignInFormValues from "@/app/types/SignInFormValues";
 import { FormikProps } from "formik";
+import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 /**
@@ -42,24 +44,38 @@ export const InnerForm = (props: FormikProps<SignInFormValues>) => {
   }
 
   return (
-    <>
+    <Atom.Card extraClass="bg-base-100 flex flex-row justify-center items-center overflow-hidden">
       <Molecule.Alert
         isOpen={isOpen}
         type={"error"}
         message={props.status}
         onClose={handleClose}
       ></Molecule.Alert>
-      <section className="flex flex-col gap-4">
-        <h1 className="mx-auto text-2xl font-bold">Sign-in</h1>
-        <form
-          className="flex flex-col justify-center items-center gap-4"
-          onSubmit={props.handleSubmit}
-        >
-          {renderInputFields}
+      <div>
+        <section className="flex flex-col gap-4 p-6 md:p-12">
+          <h1 className="mx-auto text-xl font-bold text-center w-full">
+            Sign-in to start trading!
+          </h1>
 
-          <Atom.Button buttonType={"btn-primary"}>Submit</Atom.Button>
-        </form>
-      </section>
-    </>
+          <form
+            className="flex flex-col justify-center items-center gap-4 mt-6"
+            onSubmit={props.handleSubmit}
+          >
+            {renderInputFields}
+
+            <Atom.Button buttonType={"btn-primary"}>Submit</Atom.Button>
+          </form>
+        </section>
+        <div className="bg-base-200 py-4 flex flex-row justify-center items-center gap-2 text-sm">
+          <p>Don&apos;t have an Account?</p>
+          <Link className="link  link-primary" href={"/sign-up"}>
+            Sign Up.
+          </Link>
+        </div>
+      </div>
+      <div className="hidden md:flex">
+        <Image src={"/robert.jpg"} width={260} height={500} alt="alt"></Image>
+      </div>
+    </Atom.Card>
   );
 };
