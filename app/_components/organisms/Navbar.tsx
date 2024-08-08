@@ -30,7 +30,10 @@ export default async function Navbar() {
 
         <div className="navbar-end">
           {!user && (
-            <Link href={"/sign-in"} className="btn btn-primary">
+            <Link
+              href={"/sign-in"}
+              className="btn btn-primary text-neutral-100"
+            >
               Sign-In
             </Link>
           )}
