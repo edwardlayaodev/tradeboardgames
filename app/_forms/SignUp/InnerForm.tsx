@@ -57,8 +57,8 @@ export const InnerForm = (props: FormikProps<SignUpFormValues>) => {
       ></Molecule.Alert>
       <div>
         <section className="flex flex-col gap-4 p-6 md:p-12">
-          <h1 className="mx-auto text-xl font-bold text-left w-full">
-            Sign-Up
+          <h1 className="mx-auto text-xl font-bold text-center w-full">
+            Join our growing Community.
           </h1>
 
           <form
