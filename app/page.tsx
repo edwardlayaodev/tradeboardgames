@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Atom } from "./_components/atoms";
 import { createClient } from "./_utils/supabase/server";
 import { Zilla_Slab } from "next/font/google";
+import Link from "next/link";
 
 const zilla = Zilla_Slab({
   subsets: ["latin"],
@@ -28,15 +29,16 @@ export default async function Home() {
             Discover the Ultimate Board Game and Puzzle Trading Platform
           </h4>
           <div className="mt-12 flex flex-row justify-center gap-4">
-            <Atom.Button
-              extraClass="p-8 flex flex-col justify-center items-center w-1/2 hover:-translate-y-1"
-              buttonType="btn-primary"
+            <Link
+              className="p-8 btn btn-primary flex flex-col justify-center items-center hover:-translate-y-1"
+              href={"/sign-up"}
             >
               <div className="text-left">
                 <p className="text-secondary-content">Ready to Trade?</p>
-                <p className="text-neutral-100 text-3xl">Register Now </p>
+                <p className="text-neutral-100 text-3xl">Sign-Up Now </p>
               </div>
-            </Atom.Button>
+            </Link>
+
             <Atom.Button
               extraClass="p-8 flex flex-col justify-center items-center w-1/2 hover:-translate-y-1"
               buttonType="btn-secondary"
