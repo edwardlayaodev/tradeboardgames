@@ -15,7 +15,7 @@ interface Props {
  */
 export default function Hero({ children }: Props) {
   return (
-    <section className="hero bg-base-100 min-h-screen">
+    <section className="hero bg-base-200 min-h-screen">
       <div className="hero-content text-center">
         <div>{children}</div>
       </div>
