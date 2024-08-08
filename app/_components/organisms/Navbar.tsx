@@ -23,7 +23,7 @@ export default async function Navbar() {
                 height: 32,
                 alt: "dice-logo",
               }}
-              label={<span className="text-primary">tradeboardgames</span>}
+              label={<span className="text-neutral">tradeboardgames</span>}
             />
           </Link>
         </div>
