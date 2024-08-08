@@ -47,9 +47,7 @@ export default function Brand({ logoProps, label }: Props) {
           alt={logoProps.alt}
         />
       )}
-      <p
-        className={`text-bold text-2xl text-primary-content font-bold ${zilla.className}`}
-      >
+      <p className={`text-bold text-2xl font-bold ${zilla.className}`}>
         {label}
       </p>
     </div>
