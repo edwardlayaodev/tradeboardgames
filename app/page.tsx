@@ -45,7 +45,7 @@ export default async function Home() {
                 <p className="text-secondary-content text-left">
                   Need more details?
                 </p>
-                <p className="text-primary-content text-neutral-100 text-3xl">
+                <p className="text-neutral-100 text-neutral-100 text-3xl">
                   Explore Features
                 </p>
               </div>
