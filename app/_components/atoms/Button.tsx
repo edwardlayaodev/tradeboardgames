@@ -9,6 +9,7 @@ import React, { MouseEventHandler } from "react";
 interface Props {
   children: React.ReactNode;
   buttonType: "btn-primary" | "btn-secondary" | "btn-neutral" | "btn-ghost";
+  extraClass?: string;
   onClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
@@ -17,11 +18,16 @@ interface Props {
  * @param {Props} props - The props for the Button component.
  * @returns JSX.Element
  */
-export default function Button({ children, buttonType, onClick }: Props) {
+export default function Button({
+  children,
+  buttonType,
+  onClick,
+  extraClass,
+}: Props) {
   return (
     <button
       type="submit"
-      className={`btn ${buttonType} btn-xs sm:btn-sm md:btn-md`}
+      className={`btn ${buttonType} btn-xs sm:btn-sm md:btn-md ${extraClass}`}
       onClick={onClick}
     >
       {children}
