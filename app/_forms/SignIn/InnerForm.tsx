@@ -67,7 +67,7 @@ export const InnerForm = (props: FormikProps<SignInFormValues>) => {
           </form>
         </section>
         <div className="bg-base-200 py-4 flex flex-row justify-center items-center gap-2 text-sm">
-          <p>Don't have an Account?</p>
+          <p>Don&apos;t have an Account?</p>
           <Link className="link  link-primary" href={"/sign-up"}>
             Sign Up.
           </Link>
