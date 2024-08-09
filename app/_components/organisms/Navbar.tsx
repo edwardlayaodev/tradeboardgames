@@ -9,7 +9,7 @@ export default async function Navbar() {
   } = await supabase.auth.getUser();
 
   return (
-    <header className="bg-base-100 px-4">
+    <header className="bg-base-100 px-4 fixed w-full">
       <div className="navbar max-w-[1280px] mx-auto">
         <div className="navbar-start">
           <Link
