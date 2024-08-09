@@ -1,10 +1,10 @@
-import { Atom } from "../_components/atoms";
-import { Form } from "../_forms";
+import AtomHero from "../_components/atoms/Hero";
+import FormSignUp from "../_forms/SignUp/SignUp";
 
 export default function SignUpPage() {
   return (
-    <Atom.Hero>
-      <Form.SignUp />
-    </Atom.Hero>
+    <AtomHero>
+      <FormSignUp />
+    </AtomHero>
   );
 }

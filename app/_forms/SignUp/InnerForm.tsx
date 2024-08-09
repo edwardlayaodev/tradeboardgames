@@ -1,10 +1,12 @@
-import { Atom } from "@/app/_components/atoms";
 import { FormikProps } from "formik";
 import SignUpFormValues from "@/app/types/SignUpFormValues";
-import { Molecule } from "@/app/_components/molecules";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import AtomCard from "@/app/_components/atoms/Card";
+import AtomInput from "@/app/_components/atoms/Input";
+import AtomButton from "@/app/_components/atoms/Button";
+import MoleculeAlert from "@/app/_components/molecules/Alert";
 /**
  * InnerForm component for rendering the sign-up form UI.
  * @param {FormikProps<FormValues>} props - The props from Formik for handling form state and actions.
@@ -22,7 +24,7 @@ export const InnerForm = (props: FormikProps<SignUpFormValues>) => {
   // render based on inputFields
   const renderInputFields = inputFields.map((item, index) => {
     return (
-      <Atom.Input
+      <AtomInput
         key={item.name + index}
         label={item.label}
         onChangeHandler={props.handleChange}
@@ -48,13 +50,13 @@ export const InnerForm = (props: FormikProps<SignUpFormValues>) => {
   }
 
   return (
-    <Atom.Card extraClass="bg-base-100 flex flex-row justify-center items-center overflow-hidden">
-      <Molecule.Alert
+    <AtomCard extraClass="bg-base-100 flex flex-row justify-center items-center overflow-hidden">
+      <MoleculeAlert
         isOpen={isOpen}
         type={"error"}
         message={props.status}
         onClose={handleClose}
-      ></Molecule.Alert>
+      ></MoleculeAlert>
       <div>
         <section className="flex flex-col gap-4 p-6 md:p-12">
           <h1 className="mx-auto text-xl font-bold text-center w-full">
@@ -67,7 +69,7 @@ export const InnerForm = (props: FormikProps<SignUpFormValues>) => {
           >
             {renderInputFields}
 
-            <Atom.Button buttonType={"btn-primary"}>Submit</Atom.Button>
+            <AtomButton buttonType={"btn-primary"}>Submit</AtomButton>
           </form>
         </section>
         <div className="bg-base-200 py-4 flex flex-row justify-center items-center gap-2 text-sm">
@@ -80,6 +82,6 @@ export const InnerForm = (props: FormikProps<SignUpFormValues>) => {
       <div className="hidden md:flex">
         <Image src={"/clint.jpg"} width={365} height={500} alt="alt" />
       </div>
-    </Atom.Card>
+    </AtomCard>
   );
 };

@@ -1,11 +1,11 @@
-import { Atom } from "@/app/_components/atoms";
+import AtomInput from "@/app/_components/atoms/Input";
 import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
 describe("Input", () => {
   it("renders the Input with the correct value", () => {
     render(
-      <Atom.Input
+      <AtomInput
         label={"test-label"}
         placeholder="enter email"
         onChangeHandler={() => {}}

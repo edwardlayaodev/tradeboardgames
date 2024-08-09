@@ -1,12 +1,12 @@
-import { Atom } from "@/app/_components/atoms";
-import { render, screen, fireEvent } from "@testing-library/react";
+import AtomToggle from "@/app/_components/atoms/Toggle";
+import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
 const toggleTypes = ["toggle", "checkbox", "radio"];
 
 const toggleRender = toggleTypes.map((type, index) => {
   return (
-    <Atom.Toggle
+    <AtomToggle
       key={type + index}
       type={type as "toggle" | "checkbox" | "radio"}
       label={`${type}_label`}

@@ -14,7 +14,7 @@ interface Props extends FormProps {
  * @param {Props} props - The props for the Select component.
  * @returns JSX.Element
  */
-export default function Select({
+export default function AtomSelect({
   name,
   label,
   altLabel,

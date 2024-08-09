@@ -1,6 +1,6 @@
-import { render, screen, fireEvent, waitFor } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import { Molecule } from "@/app/_components/molecules";
+import MoleculeModal from "@/app/_components/molecules/Modal";
 
 const actionHandler = jest.fn();
 const showModal = (HTMLDialogElement.prototype.showModal = jest.fn());
@@ -9,13 +9,13 @@ const alertType = ["info", "success", "warning", "error"];
 describe("Modal", () => {
   beforeEach(() => {
     render(
-      <Molecule.Modal
+      <MoleculeModal
         id="modal"
         buttonProps={{ type: "btn-primary", label: "buttonModal" }}
         actionHandler={actionHandler}
       >
         Hello
-      </Molecule.Modal>
+      </MoleculeModal>
     );
   });
   it("renders the button that will open the modal", () => {

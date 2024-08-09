@@ -1,10 +1,10 @@
-import { Atom } from "@/app/_components/atoms";
+import AtomCard from "@/app/_components/atoms/Card";
 import { screen, render } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
 describe("Card", () => {
   beforeEach(() => {
-    render(<Atom.Card extraClass="extra">test</Atom.Card>);
+    render(<AtomCard extraClass="extra">test</AtomCard>);
   });
 
   it("renders the card", () => {

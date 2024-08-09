@@ -6,8 +6,8 @@ import {
   XMarkIcon,
   XCircleIcon,
 } from "@heroicons/react/24/outline";
-import { Atom } from "../atoms";
-
+import AtomButton from "../atoms/Button";
+import AtomAnimated from "../atoms/Animated";
 /**
  * Interface for the Alert properties.
  * @param {"info" | "success" | "warning" | "error"} type - The type of alert, referring to the icon and color.
@@ -37,7 +37,12 @@ interface AlertProps {
  * @param {Props} props - The props for the Alert component.
  * @returns The rendered Alert component.
  */
-export default function Alert({ type, message, onClose, isOpen }: Props) {
+export default function MoleculeAlert({
+  type,
+  message,
+  onClose,
+  isOpen,
+}: Props) {
   //Type definition for Alert Types and their properties.
   type alertTypeRecord = Record<string, AlertProps>;
 
@@ -52,7 +57,7 @@ export default function Alert({ type, message, onClose, isOpen }: Props) {
   };
 
   return (
-    <Atom.Animated
+    <AtomAnimated
       animationType={"slideFromTop"}
       extraClass="w-full absolute top-0"
       isVisible={isOpen}
@@ -65,12 +70,12 @@ export default function Alert({ type, message, onClose, isOpen }: Props) {
           {alertTypeClass[type].svg}
           <span>{message}</span>
           <span className="absolute right-2 top-1">
-            <Atom.Button buttonType="btn-ghost" onClick={onClose}>
+            <AtomButton buttonType="btn-ghost" onClick={onClose}>
               <XMarkIcon role="button" className="w-6" />
-            </Atom.Button>
+            </AtomButton>
           </span>
         </div>
       </div>
-    </Atom.Animated>
+    </AtomAnimated>
   );
 }

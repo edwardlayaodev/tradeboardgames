@@ -1,4 +1,4 @@
-import { Atom } from "@/app/_components/atoms";
+import AtomButton from "@/app/_components/atoms/Button";
 import { fireEvent, screen, render } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
@@ -15,22 +15,22 @@ const buttonTypes = [
 
 const buttonRender = buttonTypes.map((type, index) => {
   return (
-    <Atom.Button
+    <AtomButton
       key={type + index}
       onClick={handleClick}
       buttonType={type as ButtonType}
     >
       {type}
-    </Atom.Button>
+    </AtomButton>
   );
 });
 
 describe("Button", () => {
   beforeEach(() => {
     render(
-      <Atom.Button onClick={handleClick} buttonType="btn-primary">
+      <AtomButton onClick={handleClick} buttonType="btn-primary">
         test
-      </Atom.Button>
+      </AtomButton>
     );
   });
 

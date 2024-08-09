@@ -1,14 +1,13 @@
-import { Atom } from "@/app/_components/atoms";
+import MoleculeAlert from "@/app/_components/molecules/Alert";
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import { Molecule } from "@/app/_components/molecules";
 
 const closeHandler = jest.fn();
 const alertType = ["info", "success", "warning", "error"];
 
 const alertRender = alertType.map((type, index) => {
   return (
-    <Molecule.Alert
+    <MoleculeAlert
       key={type + index}
       type={type as "info" | "success" | "warning" | "error"}
       message={`${type}_message`}
@@ -27,7 +26,7 @@ describe("Alert", () => {
   });
   it("does not render the alert when isOpen is false", () => {
     render(
-      <Molecule.Alert
+      <MoleculeAlert
         type="info"
         message={`message`}
         isOpen={false}
@@ -40,7 +39,7 @@ describe("Alert", () => {
   });
   it("fire onClose function handler", async () => {
     const { container } = render(
-      <Molecule.Alert
+      <MoleculeAlert
         type="info"
         message={`message`}
         isOpen={true}

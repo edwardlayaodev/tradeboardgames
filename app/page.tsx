@@ -1,5 +1,5 @@
-import Image from "next/image";
-import { Atom } from "./_components/atoms";
+import AtomButton from "./_components/atoms/Button";
+import AtomHero from "./_components/atoms/Hero";
 import { createClient } from "./_utils/supabase/server";
 import { Zilla_Slab } from "next/font/google";
 import Link from "next/link";
@@ -19,7 +19,7 @@ export default async function Home() {
   // on mount check if user is authenticated
 
   return (
-    <Atom.Hero>
+    <AtomHero>
       <section className="flex flex-col-reverse lg:flex-row justify-center items-center gap-4">
         <div className="w-full lg:w-1/2 p-4">
           <h1
@@ -43,7 +43,7 @@ export default async function Home() {
               </div>
             </Link>
 
-            <Atom.Button
+            <AtomButton
               extraClass="p-8 flex flex-col justify-center items-center w-full lg:w-[250px] hover:-translate-y-1"
               buttonType="btn-secondary"
             >
@@ -55,7 +55,7 @@ export default async function Home() {
                   Explore Features
                 </p>
               </div>
-            </Atom.Button>
+            </AtomButton>
           </div>
         </div>
         <div className="mockup-browser bg-base-300 border w-3/4 lg:w-1/2">
@@ -64,6 +64,6 @@ export default async function Home() {
           </div>
         </div>
       </section>
-    </Atom.Hero>
+    </AtomHero>
   );
 }

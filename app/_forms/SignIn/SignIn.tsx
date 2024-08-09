@@ -9,7 +9,7 @@ import SignInFormValues from "@/app/types/SignInFormValues";
 /**
  * SignIn component enhanced with Formik for form handling.
  */
-const SignIn = withFormik({
+const FormSignIn = withFormik({
   mapPropsToValues: () => {
     return {
       email: "",
@@ -45,4 +45,4 @@ const SignIn = withFormik({
   },
 })(InnerForm);
 
-export default SignIn;
+export default FormSignIn;

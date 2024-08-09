@@ -1,8 +1,7 @@
 import Link from "next/link";
 import { createClient } from "@/app/_utils/supabase/server";
-import { Atom } from "../atoms";
-
-export default async function Navbar() {
+import AtomBrand from "../atoms/Brand";
+export default async function OrganismNavbar() {
   const supabase = createClient();
   const {
     data: { user },
@@ -16,7 +15,7 @@ export default async function Navbar() {
             className="flex flex-row justify-center items-center gap-2"
             href={"/"}
           >
-            <Atom.Brand
+            <AtomBrand
               logoProps={{
                 src: "/dice.svg",
                 width: 32,

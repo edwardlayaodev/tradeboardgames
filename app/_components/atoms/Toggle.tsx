@@ -41,7 +41,7 @@ const ToggleProps: InputTypeRecord = {
  * @param {Props} props - The props for the Toggle component.
  * @returns {JSX.Element} The rendered toggle input component.
  */
-export default function Toggle({
+export default function AtomToggle({
   checked = false,
   label,
   name,

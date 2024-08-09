@@ -5,7 +5,7 @@ import {
   DocumentTextIcon,
   DocumentIcon,
 } from "@heroicons/react/16/solid";
-import { Atom } from ".";
+import AtomAnimated from "./Animated";
 
 /**
  * Props interface for the Input component.
@@ -69,7 +69,7 @@ const InputProps: InputTypeRecord = {
  * @param {Props} props - The props for the Input component.
  * @returns {JSX.Element} The rendered input component.
  */
-export default function Input({
+export default function AtomInput({
   iconPosition = "start",
   label,
   placeholder,
@@ -105,7 +105,7 @@ export default function Input({
         {iconPosition == "end" && InputProps[type].svg}
       </label>
 
-      <Atom.Animated
+      <AtomAnimated
         animationType="opacity"
         extraClass=""
         isVisible={errors[name] && touched[name]}
@@ -113,7 +113,7 @@ export default function Input({
         {errors[name] && touched[name] && (
           <p className="text-error text-sm w-full ">{errors[name]}</p>
         )}
-      </Atom.Animated>
+      </AtomAnimated>
     </>
   );
 }

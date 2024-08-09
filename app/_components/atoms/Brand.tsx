@@ -36,7 +36,7 @@ interface Props {
  * @param {Props} props - The props for the Brand component.
  * @returns The rendered Brand component.
  */
-export default function Brand({ logoProps, label }: Props) {
+export default function AtomBrand({ logoProps, label }: Props) {
   return (
     <div className="flex flex-row justify-center items-center gap-2">
       {logoProps && (
