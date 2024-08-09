@@ -15,6 +15,6 @@ interface Props {
  * @param {Props} props - The props for the Visibility component.
  * @returns JSX.Element | null
  */
-export default function Visibility({ children, state }: Props) {
+export default function AtomVisibility({ children, state }: Props) {
   return state ? children : null;
 }

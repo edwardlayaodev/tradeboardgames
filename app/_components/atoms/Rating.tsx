@@ -13,7 +13,11 @@ interface Props extends FormProps {
  * @param {Props} props - The props for the Rating component.
  * @returns JSX.Element
  */
-export default function Rating({ onChangeHandler, name, maxRating }: Props) {
+export default function AtomRating({
+  onChangeHandler,
+  name,
+  maxRating,
+}: Props) {
   // Array to hold the rating elements
   const elements = [];
 

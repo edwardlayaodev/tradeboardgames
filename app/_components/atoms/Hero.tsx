@@ -13,7 +13,7 @@ interface Props {
  * @param {Props} props - The props for the Hero component.
  * @returns JSX.Element
  */
-export default function Hero({ children }: Props) {
+export default function AtomHero({ children }: Props) {
   return (
     <section className="hero bg-base-200 min-h-screen">
       <div className="hero-content text-center">

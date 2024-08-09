@@ -15,7 +15,7 @@ interface Props extends FormProps {
  * @param {Props} props - The props for the TextArea component.
  * @returns JSX.Element
  */
-export default function TextArea({
+export default function AtomTextArea({
   placeholder,
   touched,
   value,

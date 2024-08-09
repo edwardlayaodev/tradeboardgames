@@ -15,7 +15,7 @@ interface Props extends FormProps {
  * @param {Props} props - The props for the Range component.
  * @returns JSX.Element
  */
-export default function Range({
+export default function AtomRange({
   onChangeHandler,
   onBlurHandler,
   min = 0,

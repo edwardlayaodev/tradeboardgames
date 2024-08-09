@@ -1,5 +1,5 @@
-import { Atom } from "../atoms";
-import React, { cloneElement } from "react";
+import React from "react";
+import AtomButton from "../atoms/Button";
 
 interface Props {
   id: string;
@@ -22,9 +22,9 @@ export default function Modal({ buttonProps, children, id }: Props) {
 
   return (
     <>
-      <Atom.Button onClick={handleOpen} buttonType={buttonProps.type}>
+      <AtomButton onClick={handleOpen} buttonType={buttonProps.type}>
         {buttonProps.label}
-      </Atom.Button>
+      </AtomButton>
       <dialog id={id} className="modal modal-bottom sm:modal-middle">
         <div className="modal-box">
           {children}

@@ -18,7 +18,7 @@ interface Props {
  * @param {Props} props - The props for the Button component.
  * @returns JSX.Element
  */
-export default function Button({
+export default function AtomButton({
   children,
   buttonType,
   onClick,

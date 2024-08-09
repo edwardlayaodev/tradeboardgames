@@ -37,7 +37,7 @@ const AnimationTypeProps: AnimationTypeRecord = {
  * @param {Props} props - The props for the Animated component.
  * @returns
  */
-export default function Animated({
+export default function AtomAnimated({
   children,
   isVisible,
   extraClass,
