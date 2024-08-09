@@ -1,13 +1,12 @@
 import AtomButton from "@/app/_components/atoms/Button";
 import AtomCard from "@/app/_components/atoms/Card";
 import AtomInput from "@/app/_components/atoms/Input";
-import { Molecule } from "@/app/_components/molecules";
 import SignInFormValues from "@/app/types/SignInFormValues";
 import { FormikProps } from "formik";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-
+import MoleculeAlert from "@/app/_components/molecules/Alert";
 /**
  * InnerForm component for rendering the form UI.
  * @param {FormikProps<FormValues>} props - The props from Formik for handling form state and actions.
@@ -47,12 +46,12 @@ export const InnerForm = (props: FormikProps<SignInFormValues>) => {
 
   return (
     <AtomCard extraClass="bg-base-100 flex flex-row justify-center items-center overflow-hidden">
-      <Molecule.Alert
+      <MoleculeAlert
         isOpen={isOpen}
         type={"error"}
         message={props.status}
         onClose={handleClose}
-      ></Molecule.Alert>
+      ></MoleculeAlert>
       <div>
         <section className="flex flex-col gap-4 p-6 md:p-12">
           <h1 className="mx-auto text-xl font-bold text-center w-full">

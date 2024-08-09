@@ -1,12 +1,12 @@
 import { FormikProps } from "formik";
 import SignUpFormValues from "@/app/types/SignUpFormValues";
-import { Molecule } from "@/app/_components/molecules";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import AtomCard from "@/app/_components/atoms/Card";
 import AtomInput from "@/app/_components/atoms/Input";
 import AtomButton from "@/app/_components/atoms/Button";
+import MoleculeAlert from "@/app/_components/molecules/Alert";
 /**
  * InnerForm component for rendering the sign-up form UI.
  * @param {FormikProps<FormValues>} props - The props from Formik for handling form state and actions.
@@ -51,12 +51,12 @@ export const InnerForm = (props: FormikProps<SignUpFormValues>) => {
 
   return (
     <AtomCard extraClass="bg-base-100 flex flex-row justify-center items-center overflow-hidden">
-      <Molecule.Alert
+      <MoleculeAlert
         isOpen={isOpen}
         type={"error"}
         message={props.status}
         onClose={handleClose}
-      ></Molecule.Alert>
+      ></MoleculeAlert>
       <div>
         <section className="flex flex-col gap-4 p-6 md:p-12">
           <h1 className="mx-auto text-xl font-bold text-center w-full">

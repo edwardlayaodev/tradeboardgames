@@ -9,7 +9,7 @@ import { InnerForm } from "./InnerForm";
 /**
  * SignUp component enhanced with Formik for form handling.
  */
-const SignUp = withFormik({
+const FormSignUp = withFormik({
   mapPropsToValues: () => ({
     email: "",
     password: "",
@@ -44,4 +44,4 @@ const SignUp = withFormik({
   },
 })(InnerForm);
 
-export default SignUp;
+export default FormSignUp;
