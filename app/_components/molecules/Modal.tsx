@@ -14,7 +14,7 @@ interface buttonProps {
   label: string;
 }
 
-export default function Modal({ buttonProps, children, id }: Props) {
+export default function MoleculeModal({ buttonProps, children, id }: Props) {
   function handleOpen() {
     const dialog = document.getElementById(id) as HTMLDialogElement;
     if (dialog) dialog.showModal();

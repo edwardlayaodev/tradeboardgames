@@ -37,7 +37,12 @@ interface AlertProps {
  * @param {Props} props - The props for the Alert component.
  * @returns The rendered Alert component.
  */
-export default function Alert({ type, message, onClose, isOpen }: Props) {
+export default function MoleculeAlert({
+  type,
+  message,
+  onClose,
+  isOpen,
+}: Props) {
   //Type definition for Alert Types and their properties.
   type alertTypeRecord = Record<string, AlertProps>;
 
