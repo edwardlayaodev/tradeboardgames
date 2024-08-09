@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { createClient } from "@/app/_utils/supabase/server";
 import AtomBrand from "../atoms/Brand";
-export default async function Navbar() {
+export default async function OrganismNavbar() {
   const supabase = createClient();
   const {
     data: { user },

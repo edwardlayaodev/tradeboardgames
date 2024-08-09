@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function Footer() {
+export default function OrganismFooter() {
   return (
     <footer className="footer footer-center bg-base-300 text-base-content p-4">
       <aside>
