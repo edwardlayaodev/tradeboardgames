@@ -1,11 +1,11 @@
-import { Atom } from "@/app/_components/atoms";
+import AtomBrand from "@/app/_components/atoms/Brand";
 import { render } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
 describe("Brand", () => {
   it("renders the logo and has correct logo props, and renders the label", () => {
     const component = render(
-      <Atom.Brand
+      <AtomBrand
         logoProps={{ src: "next.svg", width: 50, height: 50, alt: "next" }}
         label="test"
       />

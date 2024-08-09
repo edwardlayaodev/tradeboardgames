@@ -1,11 +1,11 @@
-import { Atom } from "@/app/_components/atoms";
+import AtomRating from "@/app/_components/atoms/Rating";
 import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
 describe("Rating", () => {
   beforeEach(() => {
     render(
-      <Atom.Rating
+      <AtomRating
         maxRating={5}
         label={"rating"}
         onChangeHandler={() => {}}

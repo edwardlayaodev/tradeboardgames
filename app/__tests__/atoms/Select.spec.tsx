@@ -1,5 +1,5 @@
-import { Atom } from "@/app/_components/atoms";
-import { render, screen, fireEvent } from "@testing-library/react";
+import AtomSelect from "@/app/_components/atoms/Select";
+import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
 const options = ["foo", "bar"];
@@ -7,7 +7,7 @@ const options = ["foo", "bar"];
 describe("Select", () => {
   beforeEach(() => {
     render(
-      <Atom.Select
+      <AtomSelect
         optionList={options}
         altLabel="foobar"
         label={"select"}

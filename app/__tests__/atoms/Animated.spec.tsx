@@ -1,41 +1,41 @@
-import { Atom } from "@/app/_components/atoms";
+import AtomAnimated from "@/app/_components/atoms/Animated";
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
 
 describe("Animated", () => {
   it("renders correctly when isVisible is true", () => {
     const component = render(
-      <Atom.Animated animationType={"opacity"} extraClass="" isVisible={true}>
+      <AtomAnimated animationType={"opacity"} extraClass="" isVisible={true}>
         test
-      </Atom.Animated>
+      </AtomAnimated>
     );
     const text = component.queryByText("test");
     expect(text).toBeInTheDocument();
   });
   it("does not render when isVisible is false", () => {
     const component = render(
-      <Atom.Animated animationType={"opacity"} extraClass="" isVisible={false}>
+      <AtomAnimated animationType={"opacity"} extraClass="" isVisible={false}>
         test
-      </Atom.Animated>
+      </AtomAnimated>
     );
     const text = component.queryByText("test");
     expect(text).not.toBeInTheDocument();
   });
   it("adds the correct animation for each animationType", () => {
     const component1 = render(
-      <Atom.Animated animationType={"opacity"} extraClass="" isVisible={true}>
+      <AtomAnimated animationType={"opacity"} extraClass="" isVisible={true}>
         opacity
-      </Atom.Animated>
+      </AtomAnimated>
     );
 
     const component2 = render(
-      <Atom.Animated
+      <AtomAnimated
         animationType={"slideFromTop"}
         extraClass=""
         isVisible={true}
       >
         slide
-      </Atom.Animated>
+      </AtomAnimated>
     );
     const text = component1.getByText("opacity");
     const text2 = component2.getByText("slide");
@@ -49,13 +49,13 @@ describe("Animated", () => {
 
   it("adds the proper extraClass to the component", () => {
     const component = render(
-      <Atom.Animated
+      <AtomAnimated
         animationType={"opacity"}
         extraClass="test"
         isVisible={true}
       >
         test
-      </Atom.Animated>
+      </AtomAnimated>
     );
     const text = component.queryByText("test");
     expect(text).toHaveClass("test");

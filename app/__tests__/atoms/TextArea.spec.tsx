@@ -1,11 +1,11 @@
-import { Atom } from "@/app/_components/atoms";
-import { render, screen, fireEvent } from "@testing-library/react";
+import AtomTextArea from "@/app/_components/atoms/TextArea";
+import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
 describe("TextArea", () => {
   beforeEach(() => {
     render(
-      <Atom.TextArea
+      <AtomTextArea
         altLabel="altlabel"
         placeholder="textarea placeholder"
         label={"label"}
